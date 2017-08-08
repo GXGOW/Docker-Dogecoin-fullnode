@@ -30,7 +30,8 @@ if [ ! -f ~/.litecoin/litecoin.conf ]; then
         PWord=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1`
         echo rpcpassword=$PWord >> ~/.litecoin/litecoin.conf
 fi
-
+##Remove debug.log weekly. It gets pretty big over time
+find ~/.litecoin/debug.log -mtime +7 -type f -delete
 ##Start litecoind daemon
 echo Running litecoind in the background
 ~/litecoin-bin/bin/litecoind -daemon
