@@ -19,7 +19,7 @@ if [ ! -f ~/litecoin-bin/bin/litecoind ]; then
     ##Rename folder appropriately
     mv litecoin-0.14.2 litecoin-bin
     ##Add litecoind commands to PATH
-    export PATH=$PATH:~/litecoin-bin/bin/ > ~/.bashrc
+    echo 'export PATH=$PATH:~/litecoin-bin/bin/' > ~/.bashrc
     source ~/.bashrc 
 fi
 
