@@ -30,6 +30,11 @@ if [ ! -f ~/.litecoin/litecoin.conf ]; then
         PWord=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1`
         echo rpcpassword=$PWord >> ~/.litecoin/litecoin.conf
 fi
+##Remove bootstrap.dat.old if it exists
+if [ -f ~/.litecoin/bootstrap.dat.old ]
+    rm ~/.litecoin/bootstrap.dat.old
+fi
+
 ##Start litecoind daemon
 echo Running litecoind in the background
 ~/litecoin-bin/bin/litecoind -maxconnections=500 -printtoconsole -shrinkdebugfile
