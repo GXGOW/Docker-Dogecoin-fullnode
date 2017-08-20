@@ -1,6 +1,7 @@
 # Litecoin node for Docker
 
-![litecoin](https://wetpiece.com/wp-content/uploads/2017/06/litecoin.jpg)
+![litecoin](https://litecoin.org/img/litecoin.svg)
+
 *This is pretty much the same as my [Dogecoin node](https://github.com/GXGOW/Docker-Dogecoin-fullnode). Only difference is that every 'doge' is replaced by 'lite'.*
 
 Run a Litecoin fullnode in an isolated Docker container
