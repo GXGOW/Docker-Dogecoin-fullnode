@@ -50,7 +50,7 @@ Same result, it's up and running.
 
 Initial sync may take some time (total blockchain size as of writing is about 8 GB). That's why it may be useful to have a bootstrap file to make the initial sync process a little faster.
 
-You can get the bootstrap.dat file from [bootstrap.litecoinnode.org](http://bootstrap.litecoinnode.org/) (They regularly update an up-to-date bootstrap file)
+You can get the bootstrap.dat file from [bootstrap.litecoinnode.org](http://bootstrap.litecoinnode.org/) (They regularly upload an up-to-date bootstrap file)
 
 Sit back and relax while it's downloading. It's a large file, so it may take some time.
 
