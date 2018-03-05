@@ -1,7 +1,7 @@
 # Quick rebuild script
 
-docker stop litenode
-docker rm litenode
-docker rmi liteimage
-docker build -t='liteimage' .
-docker run -p 9333:9333 --name litenode liteimage
+docker stop dogenode
+docker rm dogenode
+docker rmi dogeimage
+docker build -t='dogeimage' .
+docker run -p 9333:9333 --name dogenode dogeimage
