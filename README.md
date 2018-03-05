@@ -41,7 +41,7 @@ git clone https://github.com/GXGOW/Docker-Litecoin-fullnode.git
 # Perform your customisations (optional)
 
 # Run the build script (it'll also run as a .sh script. Just copy the contents or change the file extension.)
-.\build.ps1
+./build.sh
 ```
 
 Same result, it's up and running.
