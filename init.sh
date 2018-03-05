@@ -16,6 +16,7 @@ if [ ! -f ~/litecoin-bin/bin/litecoind ]; then
         ##Add litecoind commands to PATH
         echo 'export PATH=$PATH:~/litecoin-bin/bin/' > ~/.bashrc
         source ~/.bashrc
+        rm litecoin.tar.gz key.asc
     else
         echo "Download failed. Exiting..."
         exit 1
