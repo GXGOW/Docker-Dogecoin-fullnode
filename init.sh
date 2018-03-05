@@ -18,8 +18,10 @@ if [ ! -f ~/litecoin-bin/bin/litecoind ]; then
         source ~/.bashrc
         rm litecoin.tar.gz key.asc
     else
-        echo "Download failed. Exiting..."
-        exit 1
+        rm litecoin.tar.gz key.asc
+        echo "Verification failed. Restarting script in 5 seconds"
+        sleep 5
+        exec /init.sh
     fi
 fi
 
