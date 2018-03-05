@@ -1,6 +1,6 @@
 # Dogecoin node for Docker
 
-![wow](http://www.digitalmoneycorp.com/blog/wp-content/uploads/2015/09/dogecoin-proves-its-worth-generosity-kindness.jpg)
+![wow](http://dogecoin.com/imgs/dogecoin-300.png)
 
 Run a Dogecoin fullnode in an isolated Docker container
 
