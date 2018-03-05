@@ -1,15 +1,25 @@
 #!/bin/bash
 
-##Update packages
-apt update && apt upgrade -y
-##Check if binaries are already installed
+## Update packages
+apt update && apt upgrade -y && apt install -y curl gpg ca-certificates tar dirmngr
+## Check if binaries are already installed
+cd ~
 if [ ! -f ~/litecoin-bin/bin/litecoind ]; then
-    cd ~
-    ##Rename folder appropriately
-    mv litecoin-0.14.2 litecoin-bin
-    ##Add litecoind commands to PATH
-    echo 'export PATH=$PATH:~/litecoin-bin/bin/' > ~/.bashrc
-    source ~/.bashrc 
+    curl -o litecoin.tar.gz https://download.litecoin.org/litecoin-0.15.1/linux/litecoin-0.15.1-x86_64-linux-gnu.tar.gz
+    curl -o key.asc https://download.litecoin.org/litecoin-0.15.1/linux/litecoin-0.15.1-x86_64-linux-gnu.tar.gz.asc
+    gpg --recv-keys FE3348877809386C
+    gpg --verify key.asc litecoin.tar.gz
+    if [ $? -eq 0 ]; then
+        tar -xvf litecoin.tar.gz
+        ##Rename folder appropriately
+        mv litecoin-0.15.1 litecoin-bin
+        ##Add litecoind commands to PATH
+        echo 'export PATH=$PATH:~/litecoin-bin/bin/' > ~/.bashrc
+        source ~/.bashrc
+    else
+        echo "Download failed. Exiting..."
+        exit 1
+    fi
 fi
 
 ##Check if configuration file exists
@@ -25,5 +35,5 @@ if [ -f ~/.litecoin/bootstrap.dat.old ]; then
 fi
 
 ##Start litecoind daemon
-echo Running litecoind in the background
+echo Running litecoin
 ~/litecoin-bin/bin/litecoind -maxconnections=500 -printtoconsole -shrinkdebugfile
