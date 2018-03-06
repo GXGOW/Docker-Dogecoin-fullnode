@@ -50,19 +50,9 @@ Initial sync may take a looooong time (total blockchain size as of writing is ov
 
 You can get the bootstrap.dat file from:
 
-* [Google Drive](https://drive.google.com/drive/folders/0B4kwVxcNWulsQ0w4NXN0TlFkOEU) (Snapshot from May 27 2017)
-* Magnet link (Snapshot from August 1st 2017) (Not all torrents are illegal, y'know)
+* [Torrent link](http://jrn.me.uk/dogecoin_torrents/bootstrap_2018-01-09.dat.torrent) (Snapshot 2018-01-09, credit goes to [this reddit thread](https://www.reddit.com/r/dogecoin/comments/7p6f2m/dogecoin_bootstrapdat_torrent/))
 
-```
-
-magnet:?xt=urn:btih:9BFE8E4324EBE0E6F0CF25B3C6C4825A4C2E2238&dn=doge-bootstrap-2017-08-01&tr=http%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce)
-```
-
-* [Torrent link](http://insecure.cjk.ovh/doge-bootstrap-2017-08-01.torrent) (same as magnet link)
-
-(Shoutout to [curtisjk](https://www.reddit.com/user/curtisjk) and [xJRWR](https://www.reddit.com/user/xJRWR) for creating and hosting these)
-
-Sit back and relax while it's downloading. It's a large file, so it may take some time. (I recommend downloading via torrent, since it's a lot faster than Google Drive and has an up to date file)
+Sit back and relax while it's downloading. It's a large file, so it may take some time.
 
 Before copying the bootstrap file to the Docker container, **make sure you've run the container at least once**. Then, copy bootstrap.dat using following commands:
 
